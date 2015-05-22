@@ -1,9 +1,6 @@
-if not CLIENT then return end
-
 include ("autorun/svrhoppercfg.lua")
-local ply = LocalPlayer()
 
-function ServerHopper()
+local function ServerHopper()
 	local SHFrame = vgui.Create( "DFrame" )
 	SHFrame:SetSize( 200, 270)
 	SHFrame:Center()
@@ -27,8 +24,7 @@ function ServerHopper()
 
       SHButton1.DoClick = function()
 
-        local ply = LocalPlayer()
-          ply:ConCommand("connect " ..SvrHop.Server_1_IP.. "" ) 
+          LocalPlayer():ConCommand("connect " ..SvrHop.Server_1_IP.. "" ) 
     	
     end
 
@@ -42,8 +38,8 @@ function ServerHopper()
     end
 
       SHButton2.DoClick = function()
-        local ply = LocalPlayer()
-        ply:ConCommand("connect " ..SvrHop.Server_2_IP.. "" ) 
+
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_2_IP.. "" ) 
         
     	
     end
@@ -58,8 +54,8 @@ function ServerHopper()
     end
 
       SHButton3.DoClick = function()
-        local ply = LocalPlayer()
-        ply:ConCommand("connect " ..SvrHop.Server_3_IP.. "" ) 
+   
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_3_IP.. "" ) 
     	
     end
 
@@ -73,8 +69,8 @@ function ServerHopper()
     end
 
       SHButton4.DoClick = function()
-        local ply = LocalPlayer()
-        ply:ConCommand("connect " ..SvrHop.Server_4_IP.. "" ) 
+ 
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_4_IP.. "" ) 
     	
     end
 
