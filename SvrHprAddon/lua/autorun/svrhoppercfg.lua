@@ -1,8 +1,3 @@
-----//---------------------------------------------------------------------------------------------------\\--
---  Server Hopper by DG Coding Team is                                                                     --
---  licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.   --
---  For more information on this license click here http://creativecommons.org/licenses/by-nc-nd/4.0/      --
-----\\---------------------------------------------------------------------------------------------------//--
 
   SvrHop = {};
 
