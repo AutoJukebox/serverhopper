@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"				"Server Hopper"
+	
+	"author_name"			"DG Coding Team"
+	"author_email"			"autojukebox@dominiongaming.ca"
+	"author_url"			"http://www.dominiongaming.ca/"
+	"info"				"In-Game Server Hopper"
+	"override"			"0"
+}
