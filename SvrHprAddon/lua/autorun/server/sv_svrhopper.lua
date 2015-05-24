@@ -6,5 +6,7 @@ hook.Add( "PlayerSay", "ServerHopperCMD", function( ply, text )
     
                 ply:ConCommand('OpenSvrHpr')
 
+                return ""
+
         end
 end)
