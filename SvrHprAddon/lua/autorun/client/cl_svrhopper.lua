@@ -10,8 +10,8 @@ local function ServerHopper()
 	SHFrame:ShowCloseButton( false )
 	SHFrame:MakePopup()
 	SHFrame.Paint = function( self, w, h )
-        draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Background_Color )
-	end
+	     draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Background_Color )
+    end
 
     local SHButton1 = vgui.Create( "DButton", SHFrame )
     SHButton1:SetText( SvrHop.Server_1_Name )
@@ -19,23 +19,13 @@ local function ServerHopper()
     SHButton1:SetPos( 25, 25 )
     SHButton1:SetSize( 150, 25 )
     SHButton1.Paint = function( self, w, h )
-        draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
+           draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
     end
 
-    SHButton1.DoClick = function()
-		gui.EnableScreenClicker(true)
-		Derma_Query( "Are you sure you want to connect to the " .. SvrHop.Server_1_Name .. " server?", 
-			"Confirmation", 
-			"Yes",
-				function()
-					RunConsoleCommand("connect", SvrHop.Server_1_IP ) 
-				end, 
-			"No",
-				function()
-					SHFrame:Close()
-					gui.EnableScreenClicker(false)
-				end, 
-		)
+      SHButton1.DoClick = function()
+
+          LocalPlayer():ConCommand("connect " ..SvrHop.Server_1_IP.. "" ) 
+    	
     end
 
     local SHButton2 = vgui.Create( "DButton", SHFrame )
@@ -44,25 +34,16 @@ local function ServerHopper()
     SHButton2:SetPos( 25, 65 )
     SHButton2:SetSize( 150, 25 )
     SHButton2.Paint = function( self, w, h )
-        draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
+           draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
     end
 
-    SHButton2.DoClick = function()
-		gui.EnableScreenClicker(true)
-		Derma_Query( "Are you sure you want to connect to the " .. SvrHop.Server_2_Name .. " server?", 
-			"Confirmation", 
-			"Yes",
-				function()
-					RunConsoleCommand("connect", SvrHop.Server_2_IP ) 
-				end, 
-			"No",
-				function()
-					SHFrame:Close()
-					gui.EnableScreenClicker(false)
-				end, 
-		)
+      SHButton2.DoClick = function()
+
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_2_IP.. "" ) 
+        
+    	
     end
-	
+
     local SHButton3 = vgui.Create( "DButton", SHFrame )
     SHButton3:SetText( SvrHop.Server_3_Name )
     SHButton3:SetTextColor( SvrHop.Button_Text_Color )
@@ -71,20 +52,11 @@ local function ServerHopper()
     SHButton3.Paint = function( self, w, h )
            draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
     end
-    SHButton3.DoClick = function()
-		gui.EnableScreenClicker(true)
-		Derma_Query( "Are you sure you want to connect to the " .. SvrHop.Server_3_Name .. " server?", 
-			"Confirmation", 
-			"Yes",
-				function()
-					RunConsoleCommand("connect", SvrHop.Server_3_IP ) 
-				end, 
-			"No",
-				function()
-					SHFrame:Close()
-					gui.EnableScreenClicker(false)
-				end, 
-		)
+
+      SHButton3.DoClick = function()
+   
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_3_IP.. "" ) 
+    	
     end
 
     local SHButton4 = vgui.Create( "DButton", SHFrame )
@@ -95,20 +67,11 @@ local function ServerHopper()
     SHButton4.Paint = function( self, w, h )
            draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
     end
-    SHButton4.DoClick = function()
-		gui.EnableScreenClicker(true)
-		Derma_Query( "Are you sure you want to connect to the " .. SvrHop.Server_4_Name .. " server?", 
-			"Confirmation", 
-			"Yes",
-				function()
-					RunConsoleCommand("connect", SvrHop.Server_4_IP ) 
-				end, 
-			"No",
-				function()
-					SHFrame:Close()
-					gui.EnableScreenClicker(false)
-				end, 
-		)
+
+      SHButton4.DoClick = function()
+ 
+        LocalPlayer():ConCommand("connect " ..SvrHop.Server_4_IP.. "" ) 
+    	
     end
 
     local SHButton5 = vgui.Create( "DButton", SHFrame )
@@ -117,11 +80,17 @@ local function ServerHopper()
     SHButton5:SetPos( 45, 220 )
     SHButton5:SetSize( 110, 25 )
     SHButton5.Paint = function( self, w, h )
-        draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
+           draw.RoundedBox( 0, 0, 0, w, h, SvrHop.Button_Color )
     end
 
-    SHButton5.DoClick = function()
-		SHFrame:Close()
+      SHButton5.DoClick = function()
+        SHFrame:Close()
+        
     end
+
+    
+
 end
+
+
 concommand.Add( "OpenSvrHpr", ServerHopper )
