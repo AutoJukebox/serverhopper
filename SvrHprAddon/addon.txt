@@ -2,9 +2,9 @@
 {
 	"name"				"Server Hopper"
 	
-	"author_name"			"DG Coding Team"
-	"author_email"			"autojukebox@dominiongaming.ca"
-	"author_url"			"http://www.dominiongaming.ca/"
+	"author_name"			"AutoJukebox"
+	"author_email"			"autojukebox@emperorgaming.net"
+	"author_url"			"http://www.emperorgaming.net/"
 	"info"				"In-Game Server Hopper"
 	"override"			"0"
 }
